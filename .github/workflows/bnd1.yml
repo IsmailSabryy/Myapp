@@ -1,0 +1,26 @@
+name: Build & Deploy myapp
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@v3.0.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: NodeJS setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Unit Tests
+        run: mvn -B test --file app.js
+      - name: Build app
+        run: mvn -B package --file app.js
