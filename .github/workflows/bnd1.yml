@@ -8,14 +8,20 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: NodeJS setup
+
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: Unit Tests
-        run: mvn -B test --file app.js
+
+      - name: Run unit tests
+        run: npm test
+        working-directory: sample-application
+
       - name: Build app
-        run: mvn -B package --file app.js
+        run: npm run build
+        working-directory: sample-application
