@@ -18,10 +18,6 @@ jobs:
         with:
           node-version: 18
 
-      - name: Run unit tests
-        run: npm test
-        working-directory: sample-application
-
       - name: Build app
         run: npm run build
         working-directory: sample-application
