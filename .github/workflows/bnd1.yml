@@ -17,6 +17,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: Start application
-        run: npm start
-        working-directory: sample-application
+      - run: npm ci
+      - run: npm run build --if-present
+      
