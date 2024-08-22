@@ -13,17 +13,9 @@ spec:
     metadata:
       labels:
         app: myapp
-     spec:
-      automountServiceAccountToken: false
+    spec:
       containers:
       - name: myapp
         image: ismailsabryibm/myapp:latest
         ports:
         - containerPort: 3000
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "200m"
-          limits:
-            memory: "512Mi"
-            cpu: "300m"
