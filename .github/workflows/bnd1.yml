@@ -57,3 +57,6 @@ jobs:
           kubectl scale deployment myapp --replicas=3
           sleep 60 #
           kubectl get pods 
+          minikube service myapp
+          sleep 60 #
+          
