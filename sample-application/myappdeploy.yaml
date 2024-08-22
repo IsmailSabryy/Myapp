@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: ismailsabryibm/myapp:latest
+        image: ismailsabryibm/myapp:1.0
         ports:
         - containerPort: 3000
