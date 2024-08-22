@@ -52,12 +52,11 @@ jobs:
           docker tag myapp:latest ismailsabryibm/myapp:latest
       - name: Push Docker Image
         run: docker push ismailsabryibm/myapp:latest 
-      - name: Apply Deploy and Service
+      - name: Apply Kubernetes Manifests
         working-directory: sample-application
         run: |
-           kubectl apply -f myappdeploy.yaml --validate=false
-           kubectl apply -f myappservice.yaml --validate=false
-           kubectl get nodes
-           kubectl get pods 
-    
+          kubectl apply -f myappdeploy.yaml --validate=false
+          kubectl apply -f myappservice.yaml --validate=false
+          kubectl get nodes
+          kubectl get pods
       
