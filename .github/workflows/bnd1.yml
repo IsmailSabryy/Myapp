@@ -24,7 +24,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker Image
-        run: docker build -t myapp:latest .
+        run: docker build -t myapp:latest ./sample-application
 
       - name: Push Docker Image
         uses: docker/build-push-action@v5
