@@ -17,7 +17,7 @@ spec:
       automountServiceAccountToken: false
       containers:
       - name: myapp
-        image: ismailsabryibm/latest  
+        image: ismailsabryibm/myapp
         ports:
         - containerPort: 3000
         resources:
