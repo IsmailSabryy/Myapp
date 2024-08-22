@@ -57,6 +57,9 @@ jobs:
           kubectl scale deployment myapp --replicas=3
           sleep 60 #
           kubectl get pods 
-          minikube service myapp
-          sleep 60 #
+      - name: Check Service Availability
+        run: |
+         SERVICE_URL=$(minikube service myapp --url)
+         echo "Service URL: $SERVICE_URL"
+         curl -I $SERVICE_URL
           
