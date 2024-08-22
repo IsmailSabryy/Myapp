@@ -54,6 +54,5 @@ jobs:
         run: |
           kubectl apply -f myappdeploy.yaml --validate=false
           kubectl apply -f myappservice.yaml --validate=false
-          kubectl get nodes
-          kubectl get pods
+          kubectl get pods --wait
       
