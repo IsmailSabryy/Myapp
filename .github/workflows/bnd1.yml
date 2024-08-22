@@ -19,5 +19,12 @@ jobs:
           node-version: 18
       - name: Downloading Package
         run: npm init -y
+      - name: Build Docker Image
+        run: docker build -t myapp:latest .
+      - name: Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ismailsabryibm/myapp:latest
     
       
