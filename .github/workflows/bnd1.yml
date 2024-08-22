@@ -45,8 +45,10 @@ jobs:
           
       - name: Build Docker Image
         run: |
-          docker build -t myapp:latest ./sample-application
-          docker tag myapp:latest ismailsabryibm/myapp:latest
+         VERSION_TAG=v22.0.1
+         docker build -t myapp:$VERSION_TAG ./sample-application
+         docker tag myapp:$VERSION_TAG ismailsabryibm/myapp:$VERSION_TAG
+         
       - name: Push Docker Image
         run: docker push ismailsabryibm/myapp:latest 
       - name: Apply Kubernetes Manifests
