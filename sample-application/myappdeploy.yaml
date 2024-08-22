@@ -19,3 +19,10 @@ spec:
         image: ismailsabryibm/myapp:1.0
         ports:
         - containerPort: 3000
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "200m"
+          limits:
+            memory: "512Mi"
+            cpu: "300m"
