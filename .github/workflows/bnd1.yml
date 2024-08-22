@@ -22,6 +22,8 @@ jobs:
           curl -LO "https://dl.k8s.io/release/v1.26.3/bin/linux/amd64/kubectl"
           chmod +x kubectl
           sudo mv kubectl /usr/local/bin/
+      - name: Check status
+        run: minikube status
   build-deploy:
     runs-on: ubuntu-latest
     steps:
@@ -52,5 +54,11 @@ jobs:
           docker tag myapp:latest ismailsabryibm/myapp:latest
       - name: Push Docker Image
         run: docker push ismailsabryibm/myapp:latest 
+      - name: Apply Deploy and Service
+        run: |
+           kubectl apply -f Myapp/sample-application/myappdeploy.yaml
+           kubectl apply -f Myapp/sample-application/myappservice.yaml
+           kubectl get nodes
+           kubectl get pods 
     
       
