@@ -22,8 +22,6 @@ jobs:
           curl -LO "https://dl.k8s.io/release/v1.26.3/bin/linux/amd64/kubectl"
           chmod +x kubectl
           sudo mv kubectl /usr/local/bin/
-      - name: Check status
-        run: minikube status
   build-deploy:
     runs-on: ubuntu-latest
     steps:
