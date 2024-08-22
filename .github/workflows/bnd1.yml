@@ -54,8 +54,8 @@ jobs:
         run: docker push ismailsabryibm/myapp:latest 
       - name: Apply Deploy and Service
         run: |
-           kubectl apply -f Myapp/sample-application/myappdeploy.yaml
-           kubectl apply -f Myapp/sample-application/myappservice.yaml
+           kubectl apply -f /sample-application/myappdeploy.yaml
+           kubectl apply -f /sample-application/myappservice.yaml
            kubectl get nodes
            kubectl get pods 
     
