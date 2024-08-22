@@ -23,9 +23,9 @@ spec:
           requests:
             memory: "256Mi"
             cpu: "200m"
-            storage: "1Gi"
+            storage: "1Gi"  
           limits:
             memory: "512Mi"
             cpu: "300m"
-            storage: "2Gi"
+            storage: "2Gi" 
       automountServiceAccountToken: false
