@@ -13,8 +13,7 @@ spec:
     metadata:
       labels:
         app: myapp
-        
-   spec:
+    spec:
       containers:
       - name: myapp
         image: ismailsabryibm/myapp:1.0
