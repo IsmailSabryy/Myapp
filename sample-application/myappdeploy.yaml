@@ -13,10 +13,11 @@ spec:
     metadata:
       labels:
         app: myapp
-    spec:
+     spec:
+      automountServiceAccountToken: false
       containers:
       - name: myapp
-        image: ismailsabryibm/myapp:latest
+        image: ismailsabryibm/myapp:v22.0.1  
         ports:
         - containerPort: 3000
         resources:
