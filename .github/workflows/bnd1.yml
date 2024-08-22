@@ -46,9 +46,9 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t myapp:latest ./sample-application
-          docker tag myapp:latest ismailsabryibm/myapp:latest
+          docker tag myapp:latest ismailsabryibm/myapp:1.0
       - name: Push Docker Image
-        run: docker push ismailsabryibm/myapp:latest 
+        run: docker push ismailsabryibm/myapp:1.0 
       - name: Apply Kubernetes Manifests
         working-directory: sample-application
         run: |
