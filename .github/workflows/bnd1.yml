@@ -55,8 +55,8 @@ jobs:
       - name: Apply Deploy and Service
         working-directory: sample-application
         run: |
-           kubectl apply -f myappdeploy.yaml 
-           kubectl apply -f myappservice.yaml 
+           kubectl apply -f myappdeploy.yaml --validate=false
+           kubectl apply -f myappservice.yaml --validate=false
            kubectl get nodes
            kubectl get pods 
     
