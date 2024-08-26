@@ -70,8 +70,8 @@ jobs:
       - name: Orchestration using Kubernetes
         working-directory: sample-application
         run: |
-          kubectl apply -f myappdeploy.yaml --validate=false
-          kubectl apply -f myappservice.yaml --validate=false
+          kubectl apply -f myappdeploy.yaml 
+          kubectl apply -f myappservice.yaml
           kubectl scale deployment myapp --replicas=3
           sleep 60
           kubectl get pods
