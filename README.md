@@ -27,7 +27,7 @@ MyApp is a basic Node.js application that responds with a simple "Hello, IBMers!
 
 ## Usage
 After Cloning using git clone https://github.com/IsmailSabryy/Myapp.git
-You can push it to your repo and edit. Any commit will trigger the pipeline.
+You can push it to your repo and edit. Any commit will trigger the pipeline. Make sure you edit the docker part.
 
 
 
