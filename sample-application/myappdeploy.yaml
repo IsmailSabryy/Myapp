@@ -18,14 +18,14 @@ spec:
       - name: myapp
         image: ismailsabryibm/myapp:1.0
         ports:
-        - containerPort: 3000
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "200m"
-            ephemeral-storage: "1Gi"
-          limits:
-            memory: "512Mi"
-            cpu: "300m"
-            ephemeral-storage: "2Gi"
+        # - containerPort: 3000
+        # resources:
+        #   requests:
+        #     memory: "256Mi"
+        #     cpu: "200m"
+        #     ephemeral-storage: "1Gi"
+        #   limits:
+        #     memory: "512Mi"
+        #     cpu: "300m"
+        #     ephemeral-storage: "2Gi"
       automountServiceAccountToken: false
